@@ -1,7 +1,19 @@
 {
   "redirects": [
-    { "source": "http://www.aivensystems.com/(.*)", "destination": "https://aivensystems.com/$1", "permanent": true },
-    { "source": "http://aivensystems.com/(.*)", "destination": "https://aivensystems.com/$1", "permanent": true },
-    { "source": "/www/(.*)", "destination": "https://aivensystems.com/$1", "permanent": true }
+    {
+      "source": "http://www.aivensystems.com/(.*)",
+      "destination": "https://aivensystems.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "http://aivensystems.com/(.*)",
+      "destination": "https://aivensystems.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/www/(.*)",
+      "destination": "https://aivensystems.com/$1",
+      "permanent": true
+    }
   ]
 }
