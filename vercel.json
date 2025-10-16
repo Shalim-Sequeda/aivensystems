@@ -1,12 +1,14 @@
 {
-  "redirects": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "has": [
-        { "type": "host", "value": "www.aivensystems.com" }
-      ],
-      "destination": "https://aivensystems.com/$1",
-      "permanent": true
+      "src": "vite.config.js",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
     }
+  ],
+  "redirects": [
+    { "source": "/www/(.*)", "destination": "https://aivensystems.com/$1", "permanent": true }
   ]
 }
