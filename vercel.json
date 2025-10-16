@@ -1,7 +1,7 @@
 {
   "builds": [
     {
-      "src": "vite.config.js",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist"
@@ -9,6 +9,11 @@
     }
   ],
   "redirects": [
-    { "source": "/www/(.*)", "destination": "https://aivensystems.com/$1", "permanent": true }
+    {
+      "source": "/www/(.*)",
+      "destination": "https://aivensystems.com/$1",
+      "permanent": true
+    }
   ]
 }
+
