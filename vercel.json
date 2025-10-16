@@ -1,4 +1,23 @@
 {
+  "public": true,
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/public/sitemap.xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/public/favicon.ico"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/public/robots.txt"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
   "redirects": [
     {
       "source": "http://www.aivensystems.com/(.*)",
@@ -14,12 +33,6 @@
       "source": "/www/(.*)",
       "destination": "https://aivensystems.com/$1",
       "permanent": true
-    }
-  ],
-  "routes": [
-    {
-      "src": "/sitemap.xml",
-      "dest": "/public/sitemap.xml"
     }
   ]
 }
