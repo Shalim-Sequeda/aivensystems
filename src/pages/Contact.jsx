@@ -123,10 +123,16 @@ export default function Contact() {
           >
             Enviar mensaje
           </button>
+
+          {/* Aviso de confirmación */}
+          <p className="text-sm text-slate-500 text-center mt-2">
+            Recibirás un correo de confirmación tras enviar tu mensaje.
+          </p>
         </motion.form>
       </div>
     </section>
   );
 }
+
 
 
