@@ -81,7 +81,7 @@ export default function Contact() {
 
         {/* Formulario de contacto funcional */}
         <motion.form
-          action="https://formspree.io/f/manpvwvv"
+          action="https://formspree.io/f/xdkwbozd"
           method="POST"
           className="bg-slate-900 rounded-2xl p-8 shadow-lg flex flex-col space-y-6"
           initial={{ opacity: 0, x: 40 }}
