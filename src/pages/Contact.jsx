@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -43,6 +43,18 @@ export default function Contact() {
           </div>
 
           <div className="flex items-center space-x-4">
+            <MessageCircle className="text-green-400" size={24} />
+            <a
+              href="https://wa.me/573023657540"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-green-400 transition"
+            >
+              Escríbenos por WhatsApp
+            </a>
+          </div>
+
+          <div className="flex items-center space-x-4">
             <MapPin className="text-sky-400" size={24} />
             <p>Cartagena, Colombia</p>
           </div>
@@ -67,17 +79,15 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        {/* Formulario de contacto */}
+        {/* Formulario de contacto funcional */}
         <motion.form
+          action="https://formspree.io/f/manpvwvv"
+          method="POST"
           className="bg-slate-900 rounded-2xl p-8 shadow-lg flex flex-col space-y-6"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert("Gracias por contactarte con Aiven Systems. Pronto responderemos tu mensaje.");
-          }}
         >
           <h3 className="text-2xl font-semibold text-sky-300 mb-4">
             Envíanos un mensaje
@@ -85,6 +95,7 @@ export default function Contact() {
 
           <input
             type="text"
+            name="nombre"
             placeholder="Nombre completo"
             className="p-3 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-400"
             required
@@ -92,12 +103,14 @@ export default function Contact() {
 
           <input
             type="email"
+            name="email"
             placeholder="Correo electrónico"
             className="p-3 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-400"
             required
           />
 
           <textarea
+            name="mensaje"
             placeholder="Escribe tu mensaje..."
             rows="5"
             className="p-3 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-400"
@@ -115,4 +128,5 @@ export default function Contact() {
     </section>
   );
 }
+
 
