@@ -1,17 +1,28 @@
 {
   "redirects": [
     {
-      "source": "http://www.aivensystems.com/(.*)",
+      "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "www.aivensystems.com" },
+        { "type": "scheme", "value": "http" }
+      ],
       "destination": "https://aivensystems.com/$1",
       "permanent": true
     },
     {
-      "source": "http://aivensystems.com/(.*)",
+      "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "aivensystems.com" },
+        { "type": "scheme", "value": "http" }
+      ],
       "destination": "https://aivensystems.com/$1",
       "permanent": true
     },
     {
-      "source": "/www/(.*)",
+      "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "www.aivensystems.com" }
+      ],
       "destination": "https://aivensystems.com/$1",
       "permanent": true
     }
