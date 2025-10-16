@@ -3,24 +3,6 @@
     {
       "source": "/(.*)",
       "has": [
-        { "type": "host", "value": "www.aivensystems.com" },
-        { "type": "scheme", "value": "http" }
-      ],
-      "destination": "https://aivensystems.com/$1",
-      "permanent": true
-    },
-    {
-      "source": "/(.*)",
-      "has": [
-        { "type": "host", "value": "aivensystems.com" },
-        { "type": "scheme", "value": "http" }
-      ],
-      "destination": "https://aivensystems.com/$1",
-      "permanent": true
-    },
-    {
-      "source": "/(.*)",
-      "has": [
         { "type": "host", "value": "www.aivensystems.com" }
       ],
       "destination": "https://aivensystems.com/$1",
