@@ -15,5 +15,11 @@
       "destination": "https://aivensystems.com/$1",
       "permanent": true
     }
+  ],
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/public/sitemap.xml"
+    }
   ]
 }
